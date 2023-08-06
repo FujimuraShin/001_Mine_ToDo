@@ -20,3 +20,6 @@ Route::get('/', function () {
 */
 
 Route::get('/',[\App\Http\Controllers\TasksController::class,'index'])->name('tasks.index');
+
+//詳細ページ
+Route::get('/{id}',[\App\Http\Controllers\TasksController::class,'show'])->name('tasks.detail');
